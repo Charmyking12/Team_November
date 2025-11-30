@@ -405,3 +405,8 @@ footer {
         margin-left: 10px;
     }
 }
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
