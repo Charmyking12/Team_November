@@ -338,3 +338,70 @@ footer {
     transform: scale(1.1); /* Zooms in slightly when you hover */
     box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
 }
+
+/* --- RESPONSIVE DESIGN (MOBILE & TABLET) --- */
+
+/* This triggers only on screens smaller than 768px (Tablets & Phones) */
+@media (max-width: 768px) {
+
+    /* 1. Fix the Header/Navbar */
+    .navbar {
+        flex-direction: column; /* Stacks Logo on top, Menu below */
+        padding: 15px;
+        height: auto; /* Lets it grow tall to fit links */
+        background: rgba(0, 0, 0, 0.95); /* Solid dark background */
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap; /* Lets links wrap to next line if needed */
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* 2. Resize Big Text */
+    .hero-content h1 {
+        font-size: 2.5rem; /* Make standard title smaller */
+    }
+
+    .glitch {
+        font-size: 2rem; /* Make glitch title smaller so it fits */
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 20px; /* Add side padding so text doesn't touch edges */
+    }
+
+    /* 3. Stack the Cards Vertically */
+    .card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topic-block, .card {
+        width: 100%; /* Cards take full width of phone screen */
+        margin-bottom: 20px;
+    }
+
+    /* 4. Fix Team Section */
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-card {
+        width: 100%;
+        min-width: unset; /* Allow it to shrink if needed */
+    }
+
+    /* 5. Fix Dropdowns on Mobile */
+    .dropdown-content {
+        position: relative; /* Stacks inside the menu instead of floating */
+        box-shadow: none;
+        border-top: none;
+        border-left: 2px solid #00e5ff; /* Cyan line on left instead */
+        margin-left: 10px;
+    }
+}
